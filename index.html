@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    
+<div class="crud">
+    <div class="head">
+        <h2>CRUDS</h2>
+        <p>Ramy Wafik</p>
+    </div>
+    <div class="inputs">
+        <input type="text"  id="title" placeholder="عنوان المنتج" >
+        <div class="price">
+            <input onkeyup="getTotal()" type="number"  id="price" placeholder="سعر المنتج">
+            <input onkeyup="getTotal()" type="number"  id="taxes" placeholder="الضرايب علي المنتج">
+            <input onkeyup="getTotal()" type="number"  id="ads" placeholder="الاعلانات علي المنتج">
+            <input onkeyup="getTotal()" type="number"  id="discount" placeholder="الخصم علي المنتج">
+        <small id="total"></small>
+        </div>
+        <input type="number"  id="count" placeholder="الكمية ">
+        <input type="text"  id="category" placeholder="وصف المنتج">
+    <button id="submit">انشاء</button>
+    </div>
+    <div class="outputs">
+        <div class="searchBlock">
+        <input onkeyup="searchData(this.value)" type="text"  id="search" placeholder="بحث">
+        <div class="btnSearch">
+            <button onclick="getSearchMood(this.id)" id="searchTitle">بحث بعوان المنتج</button>
+            <button onclick="getSearchMood(this.id)" id="searchCategory">بحث بوصف المنتج</button>
+        </div>
+        </div>
+        <div id="deleteAll">
+
+        </div>
+        <table>
+            <tr>
+                <th>الرقم </th>
+                <th>عنوان المنتج </th>
+                <th>السعر</th>
+                <th>الضرايب </th>
+                <th>الاعلانات</th>
+                <th>الخصم </th>
+                <th>الاجمالي </th>
+                <th>الوصف</th>
+                <th>تعديل</th>
+                <th>حذف</th>
+            </tr>
+
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+        
+    </div>
+</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
